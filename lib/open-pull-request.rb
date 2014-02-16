@@ -1,7 +1,7 @@
-require "git-pull-request/version"
+require "open-pull-request/version"
 require 'cgi'
 
-module Git
+module Open
   module PullRequest
     extend self
     def request!

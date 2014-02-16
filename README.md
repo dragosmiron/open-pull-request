@@ -1,4 +1,4 @@
-# Git::Pull::Request
+# Open::PullRequest
 
 A utility that allows you to open a *Pull Request* inside the browser.
 For the moment all pull requests will be made against master branch.
@@ -7,7 +7,7 @@ For the moment all pull requests will be made against master branch.
 
 Add this line to your application's Gemfile:
 
-    gem 'git-pull-request'
+    gem 'open-pull-request'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install git-pull-request
+    $ gem install open-pull-request
 
 ## Usage
 
@@ -26,7 +26,7 @@ This will open a internet browser window with the comparison betwwen the branch 
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/git-pull-request/fork )
+1. Fork it ( http://github.com/<my-github-username>/open-pull-request/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
