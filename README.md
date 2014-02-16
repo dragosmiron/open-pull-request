@@ -1,6 +1,7 @@
 # Git::Pull::Request
 
-TODO: Write a gem description
+A utility that allows you to open a *Pull Request* inside the browser.
+For the moment all pull requests will be made against master branch.
 
 ## Installation
 
@@ -18,7 +19,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use it go to a git repository on a separate branch than master and type
+`git pr`
+This will open a internet browser window with the comparison betwwen the branch you are currently on and master.
+
 
 ## Contributing
 

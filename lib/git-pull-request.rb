@@ -10,8 +10,14 @@ module Git
       
       root_url = "https://www.github.com/#{repo_url}/compare/"
       compared_branches = "master...#{CGI.escape(branch.strip)}"
-      options = ["pull_request[title]=#{CGI.escape(pr_title)}", "pull_request[body]=#{CGI.escape("Please give a description")}"]
-      system("open #{root_url}#{compared_branches}?#{options.join("&")}")
+      options = [
+        ["pull_request[title]", pr_title], 
+        ["pull_request[body]", "Please give a description"]
+      ].map{|pair| 
+          pair.map{ |el| CGI.escape(el) }.join("=") 
+        }.join("&")
+
+      system("open", "#{root_url}#{compared_branches}?#{options}")
     end
 
     private
@@ -26,7 +32,7 @@ module Git
     end
 
     def pr_title
-      get_branch_name.gsub(/[^w]+/, " ").capitalize
+      get_branch_name.gsub(/[^\w]+/, " ").strip.capitalize
     end
 
   end
