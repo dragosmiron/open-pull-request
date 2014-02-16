@@ -1,4 +1,4 @@
-require_relative "git-pull-request/version"
+require "git-pull-request/version"
 require 'cgi'
 
 module Git
