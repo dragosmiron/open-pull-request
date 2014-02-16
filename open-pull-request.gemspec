@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'git-pull-request/version'
+require 'open-pull-request/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "git-pull-request"
-  spec.version       = Git::PullRequest::VERSION
+  spec.name          = "open-pull-request"
+  spec.version       = Open::PullRequest::VERSION
   spec.authors       = ["Dragos Miron"]
   spec.email         = ["dragosmr@gmail.com"]
   spec.summary       = %q{Open a pull request in browser with current branch}

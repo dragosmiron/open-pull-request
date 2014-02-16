@@ -4,6 +4,6 @@
 require 'rubygems'
 require 'cgi'
 require 'open3'
-require 'git-pull-request.rb'
+require 'open-pull-request'
 
-Git::PullRequest.request!
+Open::PullRequest.request!
