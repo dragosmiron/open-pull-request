@@ -4,6 +4,6 @@
 require 'rubygems'
 require 'cgi'
 require 'open3'
-require 'open-pull-request'
+require_relative '../lib/open-pull-request'
 
-Open::PullRequest.request!
+Open::PullRequest.new.request!
