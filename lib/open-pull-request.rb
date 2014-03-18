@@ -3,7 +3,6 @@ require_relative "open-pull-request/trello_details"
 require 'cgi'
 require 'optparse'
 require 'ostruct'
-require 'pry'
 
 module Open
   class PullRequest
@@ -30,10 +29,10 @@ module Open
       root_url = "https://www.github.com/#{repo_url}/compare/"
       compared_branches = "master...#{CGI.escape(branch.strip)}"
       options = [
-        ["pull_request[title]", pr_title], 
+        ["pull_request[title]", pr_title],
         ["pull_request[body]", pr_description]
-      ].map{|pair| 
-          pair.map{ |el| CGI.escape(el) }.join("=") 
+      ].map{|pair|
+          pair.map{ |el| CGI.escape(el) }.join("=")
         }.join("&")
 
       system("open", "#{root_url}#{compared_branches}?#{options}")
@@ -56,7 +55,7 @@ module Open
 
     def option_parser
       @option_parser ||= OptionParser.new do |op|
-        
+
         op.on("-t", "--trello CARD_ID", "Trello card id to pull info from") do |v|
           options.trello_card_id = v
         end
