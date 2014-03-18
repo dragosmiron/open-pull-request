@@ -18,10 +18,12 @@ module Open
       abort unless $?.success?
       pr_description = "Please give a description"
       if options.trello_card_id
+        developer_public_key = `git config trello.developer-public-key`.strip
+        member_token = `git config trello.member-token`.strip
         trello_details = TrelloDetails.new(
           options.trello_card_id,
-          "api_key",
-          "api_key2"
+          developer_public_key,
+          member_token
         )
         pr_description = trello_details.pull_request_description
       end
