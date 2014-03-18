@@ -26,7 +26,7 @@ class TrelloDetails
     log "."
   	@card.checklists.each do |checklist|
   	  desc << build_checklist_description(checklist)
-  	  log ".\n"
+  	  log "."
   	  desc << "\n"
     end
     desc
