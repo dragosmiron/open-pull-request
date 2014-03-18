@@ -5,24 +5,24 @@ For the moment all pull requests will be made against master branch.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+`$ gem install open-pull-request`
 
-    gem 'open-pull-request'
+Optional:
+Set-up the following in git config if you want Trello integration:
+  * `git config trello.developer-public-key`
+  * `git config trello.member-token`
 
-And then execute:
 
-    $ bundle
 
-Or install it yourself as:
-
-    $ gem install open-pull-request
 
 ## Usage
 
 To use it go to a git repository on a separate branch than master and type
 `git pr`
-This will open a internet browser window with the comparison betwwen the branch you are currently on and master.
 
+This will open a internet browser window with the comparison between the branch you are currently on and master.
+
+If you want to populate the body of the pull-request with the Trello details, pass a `-t CARD_ID` parameter, with CARD_ID being the id of the Trello card
 
 ## Contributing
 

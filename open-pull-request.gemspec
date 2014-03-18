@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
 
   spec.add_dependency 'ruby-trello'
+  spec.add_dependency 'term-ansicolor'
 end
